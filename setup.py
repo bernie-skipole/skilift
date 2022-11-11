@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="skilift",
-    version="0.0.2",
+    version="0.0.3",
     author="Bernard Czenkusz",
     author_email="bernie@skipole.co.uk",
     description="Development facility for the skipole WSGI Application generator",

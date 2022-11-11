@@ -3,7 +3,6 @@
 
 import json
 
-import utils
 from .... import fromjson, editpage, editsection, utils
 from ....utils import item_info
 from skipole import FailPage, ValidateError, GoTo, ServerError, SectionData
