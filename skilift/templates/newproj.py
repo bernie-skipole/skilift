@@ -1,11 +1,4 @@
 
-########### uses development version of skipole###################################
-########### only valid on my own development pc - everyone else ignore this option
-import sys
-sys.path.insert(0, "/home/bernard/git/skilift")
-##################################################################################
-
-
 
 import os
 

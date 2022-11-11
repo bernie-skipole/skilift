@@ -2,8 +2,8 @@
 "url": "/",
 "default_language": "en",
 "brief": "skiadmin - The Skipole Admin project",
-"version": "0.0.1",
-"skipole": "5.4.9",
+"version": "0.0.2",
+"skipole": "5.5.0",
 "specialpages": {
 "about_code": 70001,
 "about_skis": 510,
@@ -4916,7 +4916,7 @@ false,
 "parts": [
 [
 "Text",
-"Your code can optionally import further useful functions from the skilift package."
+"The skilift package is described here:"
 ]
 ]
 }
