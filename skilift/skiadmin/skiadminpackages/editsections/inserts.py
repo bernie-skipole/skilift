@@ -4,7 +4,7 @@ from skipole import FailPage, ValidateError, GoTo, ServerError, SectionData
 
 from .... import utils
 
-from ....utils import editsection
+from .... import editsection
 
 
 def insert_in_section(skicall):
