@@ -115,8 +115,7 @@ application = WSGIApplication(project=PROJECT,
                               start_call=start_call,
                               submit_data=submit_data,
                               end_call=end_call,
-                              url="/",
-                              proj_ident=None)
+                              url="/")
 
 
 # Add the 'skis' application which serves javascript and css files required by
@@ -176,8 +175,8 @@ if __name__ == "__main__":
 
     # the skiadmin sub project can now be used to edit your application
     # please note: when being used to edit a project in this way, skilift requires the
-    # application to be the root application, and to have proj_ident to be set to the
-    # project name ( or set to None which automatically does this )
+    # application to be the root application, and (for skipole versions >= 5.5.2) to have
+    # proj_ident to be set to the project name ( default set to None automatically does this )
 
     # serve the application with the development server from skilift
 

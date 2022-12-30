@@ -386,7 +386,11 @@ def retrieve_editfield(skicall):
     ref = _field_ref(widgetdescription, field_arg)
 
     full_textref = ref + '.full'   # the field reference string
-    adminaccesstextblocks = utils.get_accesstextblocks(skicall.proj_ident)
+    if hasattr(skicall, "proj_ident"):
+        # for skipole >= 5.5.2
+        adminaccesstextblocks = utils.get_accesstextblocks(skicall.proj_ident)
+    else:
+        adminaccesstextblocks = utils.get_accesstextblocks(skicall.project)
 
     if adminaccesstextblocks.textref_exists(full_textref):
         pd['widget_field_textblock','textblock_ref'] = full_textref
