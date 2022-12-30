@@ -41,7 +41,7 @@ def start_call(called_ident, skicall):
                          'editedprojurl':projinfo.path,
                          'editedprojversion':projinfo.version,
                          'editedprojbrief':projinfo.brief,
-                         'adminproj':skicall.project,
+                         'adminproj':skicall.proj_ident,
                          'extend_nav_buttons':[],
                          'caller_ident':skicall.caller_ident,
                          'pagedata': PageData(),

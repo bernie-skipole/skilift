@@ -195,6 +195,8 @@ def project_info(project):
     """
     project_loaded(project)
     proj = skiboot.getproject(project)
+    if proj.proj_ident != project:
+        raise ServerError(message="The project name and proj_ident should be equal for project editing")
     return ProjectInfo(
                    project,
                    proj.version,
@@ -353,6 +355,7 @@ def get_textblock_text(textref, lang, project=None):
 def get_accesstextblocks(project=None):
     """This function returns the instance of the AccessTextBlocks class used by the project to get TextBlock text.
 
+       The project argument is the proj_ident of the project.
        If project is None, assumes the root project, if project is given; returns the AccessTextBlocks instance
        of the project. If given, project must exist as either the root, or a sub project of the root."""
     if project is None:
@@ -406,7 +409,7 @@ def item_info(project, itemnumber):
        project, project_version, itemnumber, item_type, name, brief, path, label_list, change, parentfolder_number, restricted.
 
        The values are:
-       'project' - the project name from the argument.
+       'project' - the project ident from the argument.
        'project_version' is the project version string.
        'itemnumber' is the itemnumber from the argument.
        item_type' - one of 'TemplatePage', 'Folder', 'JSON', 'CSS', 'RespondPage', 'FilePage', 'SVG'.

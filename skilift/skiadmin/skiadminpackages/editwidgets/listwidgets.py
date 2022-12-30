@@ -169,7 +169,7 @@ def retrieve_new_widget(skicall):
     ref = "widgets." + widg.modulename + "." + widg.classname
     full_textref = ref + '.full'   # the widget full reference string
 
-    adminaccesstextblocks = utils.get_accesstextblocks(skicall.project)
+    adminaccesstextblocks = utils.get_accesstextblocks(skicall.proj_ident)
 
     if adminaccesstextblocks.textref_exists(full_textref):
         pd['widgetdesc','textblock_ref'] = full_textref
