@@ -571,6 +571,8 @@ def add_allowed_caller(skicall):
     pchange = call_data['pchange']
     if not 'allowed_caller' in call_data:
         raise FailPage(message="No allowed caller given")
+    if not call_data['allowed_caller']:
+        raise FailPage(message="No allowed caller given")
     # Set the page allowed caller
     try:
         call_data['pchange'] = editresponder.add_allowed_caller(project, pagenumber, pchange, call_data['allowed_caller'])
