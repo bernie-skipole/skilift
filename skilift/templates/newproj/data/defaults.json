@@ -387,6 +387,13 @@
 "widget_class": "w3-table w3-theme-d1 w3-border w3-bordered"
 }
 },
+"lists": {
+"TableList": {
+"button_class": "w3-button w3-block w3-small w3-theme-dark",
+"odd_class": "w3-theme-d2",
+"widget_class": "w3-table w3-theme-d1 w3-border w3-bordered"
+}
+},
 "logins": {
 "NamePasswd1": {
 "button_class": "w3-button w3-theme-d4 w3-margin",
