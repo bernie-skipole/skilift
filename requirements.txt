@@ -1,1 +1,1 @@
-skipole>=5.4.9
+skipole>=5.5.3
