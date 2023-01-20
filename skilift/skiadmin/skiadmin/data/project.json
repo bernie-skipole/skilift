@@ -23317,22 +23317,28 @@ false
 },
 "delete_submit_list_string": {
 "ident": 6400,
-"brief": "delete submit_list string",
+"brief": "Deletes a submit list string",
 "RespondPage": {
-"class": "AllowStoreKeyed",
+"class": "AllowStore",
 "original_args": {
 "allowed_callers": [
 26009
 ],
 "alternate_ident": "admin_home",
-"fail_ident": null,
-"submit_option": false,
-"target_ident": 26409,
+"fail_ident": 26007,
+"submit_list": [
+"skiadminpackages",
+"editresponders",
+"editrespondpage",
+"delete_submit_list_string"
+],
+"submit_option": true,
+"target_ident": "general_json",
 "validate_fail_ident": 26007,
 "validate_option": true
 },
 "original_fields": {
-"submit_list:contents": "delete_submit_list_string_index"
+"submit_list:contents": ""
 }
 }
 },
@@ -30230,25 +30236,6 @@ false,
 "original_fields": {}
 }
 },
-"submit_delete_submit_list_string": {
-"ident": 26409,
-"brief": "deletes the submit_list_string",
-"RespondPage": {
-"class": "SubmitData",
-"original_args": {
-"allowed_callers": [],
-"fail_ident": 26007,
-"submit_list": [
-"skiadminpackages",
-"editresponders",
-"editrespondpage",
-"delete_submit_list_string"
-],
-"target_ident": 26007
-},
-"original_fields": {}
-}
-},
 "submit_remove_field": {
 "ident": 26109,
 "brief": "deletes the field",
@@ -31035,41 +31022,36 @@ false,
 [
 "Widget",
 {
-"class": "links.Table1_Button",
+"class": "lists.TableList",
 "name": "submit_list",
-"brief": "Table1_Button submit list",
+"brief": "Table showing the submit list",
 "fields": {
-"button_class": "w3-button w3-padding-small w3-small w3-theme-dark",
-"button_text": "Remove",
-"contents": [
-[
-"",
-""
-]
-],
+"button_class": "w3-button w3-block w3-small w3-theme-dark",
+"contents": [],
+"down_json_ident": "",
+"down_link_ident": "no_javascript",
 "even_class": "",
-"header_class": "w3-theme-d3",
 "hide": false,
-"json_ident": "",
-"link_ident": "delete_submit_list_string",
 "maximize_text_col": true,
 "odd_class": "w3-theme-d2",
+"remove_button_text": "Remove",
+"remove_json_ident": "delete_submit_list_string",
+"remove_link_ident": "no_javascript",
 "show": true,
-"title1": "",
+"up_json_ident": "",
+"up_link_ident": "no_javascript",
 "widget_class": "w3-table w3-theme-d1 w3-border w3-bordered",
 "widget_style": ""
 },
 "validators": {
 "contents": [
 {
-"class": "basic.NotEmpty",
-"message": "A submit_list string must be provided",
-"displaywidget": [
-"",
-"submit_list_error",
-"",
-""
-]
+"class": "basic.IntMinMax",
+"message": "Value received not an integer",
+"val_args": {
+"maxval": "255",
+"minval": "0"
+}
 }
 ]
 }

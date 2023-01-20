@@ -302,7 +302,7 @@ def retrieve_edit_respondpage(skicall):
         if r_info.submit_list:
             contents = []
             for index, s in enumerate(r_info.submit_list):
-                s_row = [s, str(index)]
+                s_row = [s, str(index), str(index), str(index)]
                 contents.append(s_row)
             pd['submit_list','contents'] = contents
         else:
@@ -776,16 +776,23 @@ def delete_submit_list_string(skicall):
     project = call_data['editedprojname']
     pagenumber = call_data['page_number']
     pchange = call_data['pchange']
-    if not 'delete_submit_list_string_index' in call_data:
+    if not ('submit_list','contents') in call_data:
         raise FailPage(message="No submit_list string given")
     try:
         # get the submit list
         submit_list = editresponder.get_submit_list(project, pagenumber, pchange)
-        idx = int(call_data['delete_submit_list_string_index'])
+        idx = int(call_data['submit_list','contents'])
         del submit_list[idx]
         call_data['pchange'] = editresponder.set_submit_list(project, pagenumber, pchange, submit_list)
     except ServerError as e:
         raise FailPage(e.message)
+    # re-create the submit list table, these contents will be sent by JSON back to the page
+    pd = call_data['pagedata']
+    contents = []
+    for index, s in enumerate(submit_list):
+        s_row = [s, str(index), str(index), str(index)]
+        contents.append(s_row)
+    pd['submit_list','contents'] = contents
 
 
 def add_submit_list_string(skicall):
