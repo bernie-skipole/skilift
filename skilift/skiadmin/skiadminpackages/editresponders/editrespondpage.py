@@ -779,10 +779,77 @@ def delete_submit_list_string(skicall):
     if not ('submit_list','contents') in call_data:
         raise FailPage(message="No submit_list string given")
     try:
+        idx = int(call_data['submit_list','contents'])
+    except:
+        raise FailPage(message="Invalid value received")
+    try:
         # get the submit list
         submit_list = editresponder.get_submit_list(project, pagenumber, pchange)
-        idx = int(call_data['submit_list','contents'])
         del submit_list[idx]
+        call_data['pchange'] = editresponder.set_submit_list(project, pagenumber, pchange, submit_list)
+    except ServerError as e:
+        raise FailPage(e.message)
+    # re-create the submit list table, these contents will be sent by JSON back to the page
+    pd = call_data['pagedata']
+    contents = []
+    for index, s in enumerate(submit_list):
+        s_row = [s, str(index), str(index), str(index)]
+        contents.append(s_row)
+    pd['submit_list','contents'] = contents
+
+
+def move_up_submit_list(skicall):
+    "Moves an item in the submit_list"
+    call_data = skicall.call_data
+    project = call_data['editedprojname']
+    pagenumber = call_data['page_number']
+    pchange = call_data['pchange']
+    if not ('submit_list','contents') in call_data:
+        raise FailPage(message="No submit_list string given")
+    try:
+        idx = int(call_data['submit_list','contents'])
+    except:
+        raise FailPage(message="Invalid value received")
+    if not idx:
+        # cannot move item at position zero to pos -1
+        raise FailPage(message="Cannot move the string up")
+    try:
+        # get the submit list
+        submit_list = editresponder.get_submit_list(project, pagenumber, pchange)
+        item = submit_list.pop(idx)
+        submit_list.insert(idx-1, item)
+        call_data['pchange'] = editresponder.set_submit_list(project, pagenumber, pchange, submit_list)
+    except ServerError as e:
+        raise FailPage(e.message)
+    # re-create the submit list table, these contents will be sent by JSON back to the page
+    pd = call_data['pagedata']
+    contents = []
+    for index, s in enumerate(submit_list):
+        s_row = [s, str(index), str(index), str(index)]
+        contents.append(s_row)
+    pd['submit_list','contents'] = contents
+
+
+def move_down_submit_list(skicall):
+    "Moves an item in the submit_list"
+    call_data = skicall.call_data
+    project = call_data['editedprojname']
+    pagenumber = call_data['page_number']
+    pchange = call_data['pchange']
+    if not ('submit_list','contents') in call_data:
+        raise FailPage(message="No submit_list string given")
+    try:
+        idx = int(call_data['submit_list','contents'])
+    except:
+        raise FailPage(message="Invalid value received")
+    try:
+        # get the submit list
+        submit_list = editresponder.get_submit_list(project, pagenumber, pchange)
+        if idx >= len(submit_list)-1:
+            # cannot move last item further down
+            raise FailPage(message="Cannot move the string down")
+        item = submit_list.pop(idx)
+        submit_list.insert(idx+1, item)
         call_data['pchange'] = editresponder.set_submit_list(project, pagenumber, pchange, submit_list)
     except ServerError as e:
         raise FailPage(e.message)
@@ -812,6 +879,7 @@ def add_submit_list_string(skicall):
         call_data['pchange'] = editresponder.set_submit_list(project, pagenumber, pchange, submit_list)
     except ServerError as e:
         raise FailPage(e.message)
+
 
 
 def set_validate_option(skicall):

@@ -2,7 +2,7 @@
 "url": "/",
 "default_language": "en",
 "brief": "skiadmin - The Skipole Admin project",
-"version": "0.0.6",
+"version": "0.0.7",
 "skipole": "5.5.3",
 "specialpages": {
 "about_code": 70001,
@@ -120,6 +120,7 @@
 "move_down_right_in_container_dom": 44570,
 "move_down_right_in_page_dom": 3670,
 "move_down_right_in_section_dom": 7570,
+"move_down_submit_list": 6430,
 "move_in_container_dom": 44510,
 "move_in_page_dom": 3610,
 "move_in_section_dom": 7510,
@@ -129,6 +130,7 @@
 "move_up_right_in_container_dom": 44550,
 "move_up_right_in_page_dom": 3650,
 "move_up_right_in_section_dom": 7550,
+"move_up_submit_list": 6420,
 "mtag": 45020,
 "multiplier": 45015,
 "new_copypage": 2460,
@@ -23407,6 +23409,60 @@ false
 "original_fields": {}
 }
 },
+"move_down_submit_list": {
+"ident": 6430,
+"brief": "Moves an item down the submit list",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+26009
+],
+"alternate_ident": "admin_home",
+"fail_ident": 26007,
+"submit_list": [
+"skiadminpackages",
+"editresponders",
+"editrespondpage",
+"move_down_submit_list"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": 26007,
+"validate_option": true
+},
+"original_fields": {
+"submit_list:contents": ""
+}
+}
+},
+"move_up_submit_list": {
+"ident": 6420,
+"brief": "Moves an item up the submit list",
+"RespondPage": {
+"class": "AllowStore",
+"original_args": {
+"allowed_callers": [
+26009
+],
+"alternate_ident": "admin_home",
+"fail_ident": 26007,
+"submit_list": [
+"skiadminpackages",
+"editresponders",
+"editrespondpage",
+"move_up_submit_list"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": 26007,
+"validate_option": true
+},
+"original_fields": {
+"submit_list:contents": ""
+}
+}
+},
 "newedit": {
 "ident": 6002,
 "brief": "edit responder",
@@ -31028,7 +31084,7 @@ false,
 "fields": {
 "button_class": "w3-button w3-block w3-small w3-theme-dark",
 "contents": [],
-"down_json_ident": "",
+"down_json_ident": "move_down_submit_list",
 "down_link_ident": "no_javascript",
 "even_class": "",
 "hide": false,
@@ -31038,7 +31094,7 @@ false,
 "remove_json_ident": "delete_submit_list_string",
 "remove_link_ident": "no_javascript",
 "show": true,
-"up_json_ident": "",
+"up_json_ident": "move_up_submit_list",
 "up_link_ident": "no_javascript",
 "widget_class": "w3-table w3-theme-d1 w3-border w3-bordered",
 "widget_style": ""
