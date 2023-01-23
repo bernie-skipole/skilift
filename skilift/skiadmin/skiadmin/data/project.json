@@ -3,7 +3,7 @@
 "default_language": "en",
 "brief": "skiadmin - The Skipole Admin project",
 "version": "0.0.8",
-"skipole": "5.5.3",
+"skipole": "5.5.4",
 "specialpages": {
 "about_code": 70001,
 "about_skis": 510,
@@ -23145,19 +23145,25 @@ false
 },
 "add_submit_list_string": {
 "ident": 6410,
-"brief": "Check the add_submit_list_string fields",
+"brief": "Adds a submit list string",
 "RespondPage": {
-"class": "AllowedFields",
+"class": "AllowStore",
 "original_args": {
 "allowed_callers": [
 26009
 ],
-"alternate_ident": "",
-"fail_ident": null,
-"submit_option": false,
-"target_ident": 26412,
-"validate_fail_ident": null,
-"validate_option": false
+"alternate_ident": "admin_home",
+"fail_ident": 26007,
+"submit_list": [
+"skiadminpackages",
+"editresponders",
+"editrespondpage",
+"add_submit_list_string"
+],
+"submit_option": true,
+"target_ident": "general_json",
+"validate_fail_ident": 26007,
+"validate_option": true
 },
 "original_fields": {
 "submit_string:input_text": ""
@@ -30254,25 +30260,6 @@ false,
 "original_fields": {}
 }
 },
-"submit_add_submit_list_string": {
-"ident": 26419,
-"brief": "sets the new submit_list_string",
-"RespondPage": {
-"class": "SubmitData",
-"original_args": {
-"allowed_callers": [],
-"fail_ident": 26007,
-"submit_list": [
-"skiadminpackages",
-"editresponders",
-"editrespondpage",
-"add_submit_list_string"
-],
-"target_ident": 26007
-},
-"original_fields": {}
-}
-},
 "submit_delete_allowed_caller": {
 "ident": 26099,
 "brief": "deletes the allowed caller",
@@ -31123,8 +31110,8 @@ false,
 "name": "submit_string",
 "brief": "Adds a submit string to submit_list",
 "fields": {
-"action": "add_submit_list_string",
-"action_json": "",
+"action": "no_javascript",
+"action_json": "add_submit_list_string",
 "button_class": "w3-button w3-theme-d4",
 "button_text": "Submit",
 "buttondiv_class": "w3-container w3-cell",
@@ -31416,23 +31403,6 @@ false,
 },
 "original_fields": {
 "allowed_caller-textinput:input_text": "allowed_caller"
-}
-}
-},
-"validate_add_submit_list_string": {
-"ident": 26412,
-"brief": "Check new submit_list_string",
-"RespondPage": {
-"class": "StoreDataKeyed",
-"original_args": {
-"fail_ident": null,
-"submit_option": false,
-"target_ident": 26419,
-"validate_fail_ident": 26007,
-"validate_option": true
-},
-"original_fields": {
-"submit_string:input_text": "submit_list_string"
 }
 }
 },

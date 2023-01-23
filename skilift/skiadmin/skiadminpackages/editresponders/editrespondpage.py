@@ -306,7 +306,7 @@ def retrieve_edit_respondpage(skicall):
                 contents.append(s_row)
             pd['submit_list','contents'] = contents
         else:
-            pd['submit_list','show'] = False
+            pd['submit_list','hide'] = True
         pd['submit_string','input_text'] = ''
         # fail page
         sd_failpage = adminutils.formtextinput(  "failpage",                        # section alias
@@ -792,9 +792,12 @@ def delete_submit_list_string(skicall):
     # re-create the submit list table, these contents will be sent by JSON back to the page
     pd = call_data['pagedata']
     contents = []
-    for index, s in enumerate(submit_list):
-        s_row = [s, str(index), str(index), str(index)]
-        contents.append(s_row)
+    if submit_list:
+        for index, s in enumerate(submit_list):
+            s_row = [s, str(index), str(index), str(index)]
+            contents.append(s_row)
+    else:
+        pd['submit_list','hide'] = True
     pd['submit_list','contents'] = contents
 
 
@@ -870,15 +873,23 @@ def add_submit_list_string(skicall):
     project = call_data['editedprojname']
     pagenumber = call_data['page_number']
     pchange = call_data['pchange']
-    if not 'submit_list_string' in call_data:
+    if not ('submit_string','input_text') in call_data:
         raise FailPage(message="No submit_list string given")
     try:
         # get the submit list
         submit_list = editresponder.get_submit_list(project, pagenumber, pchange)
-        submit_list.append(call_data['submit_list_string'])
+        submit_list.append(call_data['submit_string','input_text'])
         call_data['pchange'] = editresponder.set_submit_list(project, pagenumber, pchange, submit_list)
     except ServerError as e:
         raise FailPage(e.message)
+    # re-create the submit list table, these contents will be sent by JSON back to the page
+    pd = call_data['pagedata']
+    contents = []
+    for index, s in enumerate(submit_list):
+        s_row = [s, str(index), str(index), str(index)]
+        contents.append(s_row)
+    pd['submit_list','contents'] = contents
+    pd['submit_list','hide'] = False
 
 
 
