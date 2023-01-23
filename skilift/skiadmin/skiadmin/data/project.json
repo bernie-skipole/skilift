@@ -2,7 +2,7 @@
 "url": "/",
 "default_language": "en",
 "brief": "skiadmin - The Skipole Admin project",
-"version": "0.0.7",
+"version": "0.0.8",
 "skipole": "5.5.3",
 "specialpages": {
 "about_code": 70001,
