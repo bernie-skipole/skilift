@@ -54,6 +54,10 @@ def _field_ref(widgetdescription, field_argument):
         return 'widgets.show_error'
     elif field_argument == 'clear_error':
         return 'widgets.clear_error'
+    elif field_argument == 'highlight_class':
+        return 'widgets.highlight_class'
+    elif field_argument == 'set_highlight':
+        return 'widgets.set_highlight'
     else:
         return ".".join(("widgets", widgetdescription.modulename, widgetdescription.classname, field_argument))
 

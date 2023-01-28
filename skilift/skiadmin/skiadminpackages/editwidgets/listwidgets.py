@@ -193,6 +193,10 @@ def retrieve_new_widget(skicall):
             field_contents.append([field_argument, 'widgets.show_error'])
         elif field_argument == 'clear_error':
             field_contents.append([field_argument, 'widgets.clear_error'])
+        elif field_argument == 'highlight_class':
+            field_contents.append([field_argument, 'widgets.highlight_class'])
+        elif field_argument == 'set_highlight':
+            field_contents.append([field_argument, 'widgets.set_highlight'])
         else:
             field_contents.append([field_argument, ref + '.' + field_argument])
 
