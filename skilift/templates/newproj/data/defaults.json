@@ -164,6 +164,15 @@
 "widget_class": "w3-bar"
 }
 },
+"info": {
+"ProgressBar1": {
+"label_style": "margin-right:10px;"
+},
+"ProgressBar2": {
+"bar_class": "w3-green w3-round",
+"widget_class": "w3-light-grey w3-round"
+}
+},
 "inputforms": {
 "Form1": {
 "widget_class": "w3-section"
