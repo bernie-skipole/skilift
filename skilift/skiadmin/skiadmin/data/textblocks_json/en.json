@@ -768,7 +768,7 @@
   "widgets.info.ProgressBar2": "A progress bar formed from Divs, not using the progress tag.",
   "widgets.info.ProgressBar2.bar_class": "CSS class of the bar div, typically used to set the bar colour.",
   "widgets.info.ProgressBar2.value": "An integer bar value, between 0 and 100.",
-  "widgets.info.ProjectName": "A span showing the name of the project the page is in.",
+  "widgets.info.ProjectName": "A span showing the project ident (usually the project name unless set otherwise).",
   "widgets.info.Redirector": "A widget containing javascript which redirects the page to the given url.\r\nOnce the page is loaded, the redirection occurs, so normally this is the only widget on the page.\r\nA TextBlock is displayed with the link to the url if the client has javascript disabled.",
   "widgets.info.Redirector.text_refnotfound": "If the TextBlock is not found, this text is used instead.",
   "widgets.info.Redirector.text_replaceblock": "If text is set here, it will be used instead of a TextBlock.",
