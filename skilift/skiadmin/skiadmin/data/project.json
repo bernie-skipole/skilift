@@ -19546,7 +19546,7 @@ false
 "Widget",
 {
 "class": "paras.DivPara",
-"name": "field_type",
+"name": "show_field_name",
 "brief": "DivPara",
 "fields": {
 "clear_error": false,
@@ -19570,25 +19570,6 @@ false
 "fields": {
 "clear_error": false,
 "error_class": "",
-"para_class": "",
-"para_text": "",
-"pre_line": true,
-"show": true,
-"show_error": "",
-"widget_class": "",
-"widget_style": ""
-}
-}
-],
-[
-"Widget",
-{
-"class": "paras.DivPara",
-"name": "show_field_name",
-"brief": "DivPara",
-"fields": {
-"clear_error": false,
-"error_class": "w3-panel w3-red",
 "para_class": "",
 "para_text": "",
 "pre_line": true,

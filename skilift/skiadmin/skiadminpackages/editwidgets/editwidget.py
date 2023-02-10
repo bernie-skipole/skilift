@@ -345,8 +345,7 @@ def retrieve_editfield(skicall):
 
     pd['widget_type','para_text'] = "Widget type : %s.%s" % (widgetdescription.modulename, widgetdescription.classname)
     pd['widget_name','para_text'] = "Widget name : %s" % (widget_name,)
-    pd['field_type','para_text'] = "Field type : %s" % (field_arg,)
-
+ 
     # widgetdescription.fields_single is a list of namedtuples, each inner namedtuple representing a field
     # with items ['field_arg', 'field_type', 'valdt', 'jsonset', 'cssclass', 'cssstyle']
 
