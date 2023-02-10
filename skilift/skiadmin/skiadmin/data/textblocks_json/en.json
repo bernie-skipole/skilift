@@ -770,6 +770,7 @@
   "widgets.info.ProgressBar2.value": "An integer bar value, between 0 and 100.",
   "widgets.info.ProjectName": "A span showing the project ident (usually the project name unless set otherwise).",
   "widgets.info.Redirector": "A widget containing javascript which redirects the page to the given url.\r\nOnce the page is loaded, the redirection occurs, so normally this is the only widget on the page.\r\nA TextBlock is displayed with the link to the url if the client has javascript disabled.",
+  "widgets.info.Redirector.linebreaks": "Set True if linebreaks in the text are to be shown as html breaks.",
   "widgets.info.Redirector.text_refnotfound": "If the TextBlock is not found, this text is used instead.",
   "widgets.info.Redirector.text_replaceblock": "If text is set here, it will be used instead of a TextBlock.",
   "widgets.info.Redirector.textblock_ref": "The reference of a TextBlock which is displayed with the link to the url if the client has javascript disabled.",
