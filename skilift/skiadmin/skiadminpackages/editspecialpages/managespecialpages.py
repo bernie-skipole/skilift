@@ -62,7 +62,7 @@ def _make_list(project, reflist, labeldict):
                 if target[0] == project:
                     result.append(str(target[1]))
                 else:
-                    result.append(",".join(target))
+                    result.append(target[0]+','+str(target[1]))
         else:
             result.append('')
     return result
