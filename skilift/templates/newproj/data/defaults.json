@@ -398,7 +398,8 @@
 },
 "lists": {
 "FileList": {
-"button_class": "w3-button w3-round w3-theme-l1 w3-border"
+"button_class": "w3-button w3-block w3-black w3-left-align",
+"button_style": "margin-left:auto;width:60%;margin-right:auto;"
 },
 "TableList": {
 "button_class": "w3-button w3-block w3-small w3-theme-dark",
