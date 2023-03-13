@@ -170,7 +170,7 @@ def retrieve_edit_respondpage(skicall):
         # fills in the data for editing page name, brief, parent, etc.,
 
         sd_page_edit = SectionData("page_edit")
-        sd_page_edit['p_ident','page_ident'] = (project,str_pagenumber)
+        sd_page_edit['p_ident','span_text'] = f"{project},{str_pagenumber}"
         sd_page_edit['p_name','page_ident'] = (project,str_pagenumber)
         sd_page_edit['p_description','page_ident'] = (project,str_pagenumber)
         sd_page_edit['p_rename','input_text'] = pageinfo.name

@@ -47,7 +47,7 @@ def retrieve_edit_filepage(skicall):
 
    # fills in the data for editing page name, brief, parent, etc., 
     sd_adminhead["page_head","large_text"] = pageinfo.name
-    sd_page_edit['p_ident','page_ident'] = (project,str_pagenumber)
+    sd_page_edit['p_ident','span_text'] = f"{project},{str_pagenumber}"
     sd_page_edit['p_name','page_ident'] = (project,str_pagenumber)
     sd_page_edit['p_description','page_ident'] = (project,str_pagenumber)
     sd_page_edit['p_rename','input_text'] = pageinfo.name

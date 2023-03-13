@@ -1487,11 +1487,10 @@ false,
 [
 "Widget",
 {
-"class": "info.PageIdent",
+"class": "paras.SpanText",
 "name": "p_ident",
-"brief": "PageIdent",
+"brief": "Text showing the page ident",
 "fields": {
-"page_label": "",
 "show": true,
 "span_text": "",
 "widget_class": "",
@@ -24289,11 +24288,10 @@ false
 [
 "Widget",
 {
-"class": "info.PageIdent",
+"class": "paras.SpanText",
 "name": "p_ident",
-"brief": "PageIdent",
+"brief": "Text to show edited page ident",
 "fields": {
-"page_label": "",
 "show": true,
 "span_text": "",
 "widget_class": "",
@@ -29011,11 +29009,10 @@ false
 [
 "Widget",
 {
-"class": "info.PageIdent",
+"class": "paras.SpanText",
 "name": "ie1",
-"brief": "PageIdent",
+"brief": "text showing folder ident",
 "fields": {
-"page_label": "",
 "show": true,
 "span_text": "",
 "widget_class": "",

@@ -42,7 +42,7 @@ def retrieve_page_edit(skicall):
 
         # fills in the data for editing page name, brief, parent, etc., 
         sd_adminhead["page_head","large_text"] = pageinfo.name
-        sd_page_edit['p_ident','page_ident'] = (project,str_pagenumber)
+        sd_page_edit['p_ident','span_text'] = f"{project},{str_pagenumber}"
         sd_page_edit['p_name','page_ident'] = (project,str_pagenumber)
         sd_page_edit['p_description','page_ident'] = (project,str_pagenumber)
         sd_page_edit['p_rename','input_text'] = pageinfo.name
@@ -397,7 +397,7 @@ def retrieve_svgpage_edit(skicall):
         pd.update(sd_adminhead)
 
         sd_page_edit = SectionData("page_edit")
-        sd_page_edit['p_ident','page_ident'] = (project,str_pagenumber)
+        sd_page_edit['p_ident','span_text'] = f"{project},{str_pagenumber}"
         sd_page_edit['p_name','page_ident'] = (project,str_pagenumber)
         sd_page_edit['p_description','page_ident'] = (project,str_pagenumber)
         sd_page_edit['p_rename','input_text'] = pageinfo.name
@@ -696,7 +696,7 @@ def retrieve_edit_jsonpage(skicall):
     pd.update(sd_adminhead)
 
     sd_page_edit = SectionData("page_edit")
-    sd_page_edit['p_ident','page_ident'] = (project,str_pagenumber)
+    sd_page_edit['p_ident','span_text'] = f"{project},{str_pagenumber}"
     sd_page_edit['p_name','page_ident'] = (project,str_pagenumber)
     sd_page_edit['p_description','page_ident'] = (project,str_pagenumber)
     sd_page_edit['p_rename','input_text'] = pageinfo.name

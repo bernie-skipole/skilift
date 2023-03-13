@@ -99,7 +99,7 @@ def retrieve_edited_folder(skicall):
 
 
     # set edited folder in the required dictionary
-    pd['ie1','page_ident'] = (info.project, info.itemnumber)
+    pd['ie1','span_text'] = f"{info.project},{info.itemnumber}"
     if 'brief' in call_data:
         pd['st2','folder_brief'] = call_data['brief']
     else:
