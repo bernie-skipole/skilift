@@ -883,6 +883,8 @@
   "widgets.inputtables.InputTable1.title2": "The header title string over the second column.",
   "widgets.inputtables.InputTable1.title3": "The header title string over the third (inputs) column.",
   "widgets.inputtables.InputTable3": "A table of four columns, two being text strings, one a text input field, the fourth being a cell with up and down arrow links",
+  "widgets.inputtables.InputTable3.cell_style": "A list of lists of [row, col, cssstyle], normally set by JSON.",
+  "widgets.inputtables.InputTable3.cell_style.full": "A list of lists of [row, col, cssstyle], normally set by JSON to highlight one or more cells. Where row is the table body row starting at 1, and col is either 1 or 2 as this is only applied to cells in the first two columns.",
   "widgets.inputtables.InputTable3.col1": "A list of text strings, to be placed in the first column.",
   "widgets.inputtables.InputTable3.col1.full": "A list of text strings, to be placed in the first column. When updating by JSON, the list must have the same number of elements as rows in the table. Any element set to None, will not be changed",
   "widgets.inputtables.InputTable3.col1_class": "CSS class applied to every td in the first column.",

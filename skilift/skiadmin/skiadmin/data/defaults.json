@@ -236,12 +236,14 @@
 },
 "InputTable3": {
 "col3_class": "w3-right-align",
+"col3_style": "width:1px; white-space: nowrap;",
 "col4_class": "w3-left-align",
+"col4_style": "width:1px; white-space: nowrap;",
 "down_class": "w3-button w3-padding-small w3-small w3-theme-l2 w3-border w3-border-black",
-"header_class": "w3-theme-d2",
+"header_class": "w3-theme-d3",
 "up_class": "w3-button w3-padding-small w3-small w3-theme-l2 w3-border w3-border-black",
 "up_style": "margin-right:2px;",
-"widget_class": "w3-table w3-bordered w3-centered"
+"widget_class": "w3-table w3-theme-d1 w3-border w3-bordered"
 },
 "InputTable4": {
 "col3_class": "w3-theme-light",
