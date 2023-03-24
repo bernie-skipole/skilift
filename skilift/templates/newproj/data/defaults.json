@@ -193,6 +193,7 @@
 },
 "inputtables": {
 "InputTable1": {
+"col3_style": "width:1px; white-space: nowrap;",
 "header_class": "w3-theme-d3",
 "widget_class": "w3-table w3-theme-d1 w3-border w3-bordered"
 },
