@@ -7,7 +7,7 @@
 
 import sys, os, re, shutil
 
-version = "0.1.2"
+version = "0.1.3"
 
 DESCRIPTION = """Usage is
 
@@ -152,5 +152,3 @@ python3 %s
 To serve the project at url localhost:8000
 and localhost:8000/skiadmin for the admin pages""" % (project_pyfile,))
 sys.exit(0)
-
-
