@@ -209,8 +209,8 @@
 "widget_class": "w3-table w3-theme-d1 w3-border w3-bordered"
 },
 "InputTable4": {
-"col3_class": "w3-theme-light",
-"col4_style": "width:8em;",
+"col4_class": "w3-right-align",
+"col4_style": "width:1px; white-space: nowrap;",
 "down_class": "w3-button w3-padding-small w3-small w3-theme-dark",
 "header_class": "w3-theme-d3",
 "up_class": "w3-button w3-padding-small w3-small w3-theme-dark",
