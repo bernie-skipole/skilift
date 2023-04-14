@@ -7,7 +7,7 @@
 
 import sys, os, re, shutil
 
-version = "0.1.3"
+version = "0.1.4"
 
 DESCRIPTION = """Usage is
 
