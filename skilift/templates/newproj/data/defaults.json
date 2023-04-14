@@ -244,6 +244,7 @@
 "SubmitDict1": {
 "button_class": "w3-button w3-theme-d4 w3-margin-left",
 "inputdiv_class": "w3-center",
+"li_class": "w3-margin",
 "ul_class": "w3-center",
 "ul_style": "list-style-type: none;",
 "widget_style": "width:30%"
