@@ -221,6 +221,8 @@
 "button1_class": "w3-button w3-padding-small w3-small w3-theme-dark w3-margin-left",
 "button2_class": "w3-button w3-padding-small w3-small w3-theme-dark w3-margin-left",
 "div_class": "w3-section",
+"input_accepted_class": "w3-pale-green",
+"input_errored_class": "w3-pale-red",
 "label_style": "display:inline-block;margin-right:1%;text-align:right;width:30%;",
 "widget_class": "w3-container"
 }
