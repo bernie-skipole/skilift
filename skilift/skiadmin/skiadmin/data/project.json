@@ -3,7 +3,7 @@
 "default_language": "en",
 "brief": "skiadmin - The Skipole Admin project",
 "version": "0.1.4",
-"skipole": "5.6.0",
+"skipole": "5.6.1",
 "specialpages": {
 "about_code": 70001,
 "about_skis": 510,
@@ -16555,25 +16555,6 @@ false
 "Widget",
 {
 "class": "paras.DivPara",
-"name": "field_type",
-"brief": "DivPara",
-"fields": {
-"clear_error": false,
-"error_class": "w3-panel w3-red",
-"para_class": "",
-"para_text": "",
-"pre_line": true,
-"show": true,
-"show_error": "",
-"widget_class": "",
-"widget_style": ""
-}
-}
-],
-[
-"Widget",
-{
-"class": "paras.DivPara",
 "name": "field_name",
 "brief": "DivPara",
 "fields": {
@@ -17185,45 +17166,7 @@ false
 "Widget",
 {
 "class": "paras.DivPara",
-"name": "widget_type",
-"brief": "DivPara",
-"fields": {
-"clear_error": false,
-"error_class": "w3-panel w3-red",
-"para_class": "",
-"para_text": "",
-"pre_line": true,
-"show": true,
-"show_error": "",
-"widget_class": "",
-"widget_style": ""
-}
-}
-],
-[
-"Widget",
-{
-"class": "paras.DivPara",
 "name": "widget_name",
-"brief": "DivPara",
-"fields": {
-"clear_error": false,
-"error_class": "w3-panel w3-red",
-"para_class": "",
-"para_text": "",
-"pre_line": true,
-"show": true,
-"show_error": "",
-"widget_class": "",
-"widget_style": ""
-}
-}
-],
-[
-"Widget",
-{
-"class": "paras.DivPara",
-"name": "field_type",
 "brief": "DivPara",
 "fields": {
 "clear_error": false,
@@ -17824,25 +17767,6 @@ false
 {
 "class": "paras.DivPara",
 "name": "widget_name",
-"brief": "DivPara",
-"fields": {
-"clear_error": false,
-"error_class": "w3-panel w3-red",
-"para_class": "",
-"para_text": "",
-"pre_line": true,
-"show": true,
-"show_error": "",
-"widget_class": "",
-"widget_style": ""
-}
-}
-],
-[
-"Widget",
-{
-"class": "paras.DivPara",
-"name": "field_type",
 "brief": "DivPara",
 "fields": {
 "clear_error": false,
@@ -31655,6 +31579,7 @@ false,
 "brief": "InputTable5",
 "fields": {
 "action": "edit_system_page",
+"action_json": "",
 "button1_class": "w3-button w3-padding-small w3-small w3-theme-dark",
 "button2_class": "w3-button w3-padding-small w3-small w3-theme-dark",
 "button_text1": "Set",
@@ -31748,6 +31673,7 @@ false,
 "brief": "InputTable5",
 "fields": {
 "action": "edit_jq_page",
+"action_json": "",
 "button1_class": "w3-button w3-padding-small w3-small w3-theme-dark",
 "button2_class": "w3-button w3-padding-small w3-small w3-theme-dark",
 "button_text1": "Set",
@@ -31833,6 +31759,7 @@ false,
 "brief": "InputTable5",
 "fields": {
 "action": "edit_user_page",
+"action_json": "",
 "button1_class": "w3-button w3-padding-small w3-small w3-theme-dark",
 "button2_class": "w3-button w3-padding-small w3-small w3-theme-dark w3-margin-left",
 "button_text1": "Set",

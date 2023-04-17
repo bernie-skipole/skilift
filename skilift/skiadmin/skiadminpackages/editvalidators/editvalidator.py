@@ -74,7 +74,6 @@ def retrieve_editvalidator(skicall):
 
     pd['widget_type','para_text'] = "Widget type : %s.%s" % (widgetdescription.modulename, widgetdescription.classname)
     pd['widget_name','para_text'] = "Widget name : %s" % (widget_name,)
-    pd['field_type','para_text'] = "Field type : %s" % (field_arg,)
     pd['field_name','para_text'] = "Field name : %s" % (field_name,)
     pd['validator_type','para_text'] = "Validator type : %s.%s" % (vinfo.module_name,vinfo.validator)
 
@@ -99,7 +98,7 @@ def retrieve_editvalidator(skicall):
                                         left_label = "Submit the reference string : ")
     pd.update(sd_error_ref)
 
-    
+
     failsectionwidget = vinfo.displaywidget
     if "," in failsectionwidget:
         failsection,failwidget = failsectionwidget.split(",")
@@ -465,7 +464,6 @@ def retrieve_arg(skicall):
 
     pd['widget_type','para_text'] = "Widget type : %s.%s" % (widgetdescription.modulename, widgetdescription.classname)
     pd['widget_name','para_text'] = "Widget name : %s" % (widget_name,)
-    pd['field_type','para_text'] = "Field type : %s" % (field_arg,)
     pd['field_name','para_text'] = "Field name : %s" % (field_name,)
     pd['validator_type','para_text'] = "Validator type : %s.%s" % (vinfo.module_name,vinfo.validator)
 
@@ -708,7 +706,6 @@ def retrieve_validator_modules(skicall):
 
     pd['widget_type','para_text'] = "Widget type : %s.%s" % (widgetdescription.modulename, widgetdescription.classname)
     pd['widget_name','para_text'] = "Widget name : %s" % (widget_name,)
-    pd['field_type','para_text'] = "Field type : %s" % (field_arg,)
     pd['field_name','para_text'] = "Field name : %s" % (field_name,)
 
     call_data['extend_nav_buttons'].append(["back_to_field_edit", "Back to field", True, ''])
@@ -773,7 +770,6 @@ def retrieve_validator_list(skicall):
 
     pd['widget_type','para_text'] = "Widget type : %s.%s" % (widgetdescription.modulename, widgetdescription.classname)
     pd['widget_name','para_text'] = "Widget name : %s" % (widget_name,)
-    pd['field_type','para_text'] = "Field type : %s" % (field_arg,)
     pd['field_name','para_text'] = "Field name : %s" % (field_name,)
 
     call_data['extend_nav_buttons'].extend([["back_to_field_edit", "Back to field", True, ''],["validator_modules", "Modules", True, '']])
@@ -849,10 +845,9 @@ def create_validator(skicall):
             val_list = editvalidator.get_page_field_validator_list(project, pagenumber, call_data['pchange'], widget_name, field_arg)
     except ServerError as e:
         raise FailPage(e.message)
- 
+
     call_data['validx'] = str(len(val_list)-1)
     del call_data['validator']
     del call_data['valmodule']
 
     call_data['status'] = "Validator added"
-
